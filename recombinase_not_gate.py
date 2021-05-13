@@ -59,11 +59,11 @@ def sbol_recombinase1 (ax, type, num, start, end, prev_end, scale, linewidth, op
 		end = start+x_extent
 		final_end = end+end_pad
 	# Draw the site
-	p1 = Polygon([(start, y_lower), 
+	p1 = Polygon([(start, y_lower),
 		          (start, y_upper),
 		          (end,0)],
-		          edgecolor=(0,0,0), facecolor=color, linewidth=linewidth, zorder=11, 
-		          path_effects=[Stroke(joinstyle="miter")])		
+		          edgecolor=(0,0,0), facecolor=color, linewidth=linewidth, zorder=11,
+		          path_effects=[Stroke(joinstyle="miter")])
 	ax.add_patch(p1)
 	# Add a label if needed
 	if opts != None and 'label' in list(opts.keys()):
@@ -131,23 +131,23 @@ def sbol_recombinase2 (ax, type, num, start, end, prev_end, scale, linewidth, op
 		end = start+x_extent
 		final_end = end+end_pad
 	# Draw the site
-	p1 = Polygon([(start, y_lower), 
+	p1 = Polygon([(start, y_lower),
 		         (start, y_upper),
 		          (end,0)],
-		          edgecolor=(0,0,0), facecolor=color, linewidth=linewidth, zorder=11, 
-		          path_effects=[Stroke(joinstyle="miter")]) 
+		          edgecolor=(0,0,0), facecolor=color, linewidth=linewidth, zorder=11,
+		          path_effects=[Stroke(joinstyle="miter")])
 	midpoint = (end + start) / 2
 	hypotenuse = math.sqrt( (y_extent/2)**2 + (x_extent)**2 )
 	hypotenuse2 = hypotenuse / 2
 	cosineA = (y_extent/2) / hypotenuse
 	f = hypotenuse2 * cosineA
-	p2 = Polygon([(midpoint, -1*f), 
+	p2 = Polygon([(midpoint, -1*f),
 		          (midpoint, f),
 		          (end,0)],
-		          edgecolor=(0,0,0), facecolor=color2, linewidth=linewidth, zorder=12, 
-		          path_effects=[Stroke(joinstyle="miter")]) 	
+		          edgecolor=(0,0,0), facecolor=color2, linewidth=linewidth, zorder=12,
+		          path_effects=[Stroke(joinstyle="miter")])
 	ax.add_patch(p1)
-	ax.add_patch(p2)	
+	ax.add_patch(p2)
 	# Add a label if needed
 	if opts != None and 'label' in list(opts.keys()):
 		if final_start > final_end:
@@ -185,7 +185,7 @@ def flip_arrow (ax, type, num, from_part, to_part, scale, linewidth, arc_height_
 		arcHeightEnd = -arcHeightEnd
 	ax.annotate('', (end, arcHeightEnd), (start, arcHeightStart), ha="right", va="center", size=8, arrowprops=dict(arrowstyle='->',connectionstyle="arc3,rad=-.4",lw=linewidth, color=color))
 
-# Color maps 
+# Color maps
 col_map = {}
 col_map['red']     = (0.95, 0.30, 0.25)
 col_map['green']   = (0.38, 0.82, 0.32)
