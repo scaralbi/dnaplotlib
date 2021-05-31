@@ -58,12 +58,12 @@ part_renderers = dr.SBOL_part_renderers()
 # Create the construct programmably to plot
 sp = {'type':'EmptySpace', 'name':'S1', 'fwd':True, 'opts':{'x_extent':3}}
 int = {'type':'EmptySpace', 'name':'S1', 'fwd':True, 'opts':{'x_extent':5}}
-J19 = {'type':'Promoter', 'name':'prom1', 'fwd':True,'opts':{'linewidth':lw, 'color':Cmap(0.5), 'label':'J23119', 'label_y_offset':-5}}
-Pr = {'type':'Promoter', 'name':'prom2', 'fwd':True,'opts':{'linewidth':lw, 'color':Cmap(0.5), 'label':'PprqR', 'label_y_offset':-8}}
+J19 = {'type':'Promoter', 'name':'prom1', 'fwd':True,'opts':{'linewidth':lw, 'color':col_map['purple'], 'label':'J23119', 'label_y_offset':-5}}
+Pr = {'type':'Promoter', 'name':'prom2', 'fwd':True,'opts':{'linewidth':lw, 'color':col_map['purple'], 'label':'PprqR', 'label_y_offset':-8}}
 term = {'type':'Terminator', 'name':'term', 'fwd':True}
 ope = {'type':'Operator', 'name':'term', 'fwd':True}
 ope1 = {'type':'Operator', 'name':'term', 'fwd':True}
-rbs = {'type':'RBS', 'name':'rbs', 'fwd':True, 'opts':{'color':col_map['gray']}}
+rbs = {'type':'RBS', 'name':'rbs', 'fwd':True, 'opts':{'color':col_map['green']}}
 eYFP = {'type':'CDS', 'name':'cds', 'fwd':True, 'opts':{'color':col_map['yellow'], 'label':'eYFP', 'label_x_offset':-2, 'label_y_offset':-0.5, 'label_style':'italic'}}
 prqR = {'type':'CDS', 'name':'cds', 'fwd':True, 'opts':{'color':col_map['red'], 'label':'prqR', 'label_x_offset':-2, 'label_y_offset':-0.5, 'label_style':'italic'}}
 Pran = {'type':'Promoter', 'name':'pran', 'fwd':True,'opts':{'linewidth':lw, 'color':col_map['black'], 'label':'Prandom', 'label_y_offset':-8}}
